@@ -17,7 +17,7 @@ def async_handle_request(socketToBrowser):
             reqCookie = m.group('cookie')
             
             data = urllib.urlencode({ 'url':  reqUrl, 'cookie': reqCookie })
-            req = urllib2.Request('http://localhost:8080',  data)
+            req = urllib2.Request('http://httpagent.sinaapp.com',  data)
             response = urllib2.urlopen(req).read()            
 
             socketToBrowser.send(response)
@@ -30,7 +30,7 @@ def async_handle_request(socketToBrowser):
         print e
 
 listener = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-listener.bind(('localhost', 8087))
+listener.bind(('localhost', 8081))
 listener.listen(9999)
 print 'client is listening...'
 

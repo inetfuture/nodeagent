@@ -2,6 +2,9 @@ import webapp2
 from google.appengine.api import urlfetch
 
 class MainPage(webapp2.RequestHandler):
+    def get(self):
+        self.response.out.write('Augmentum Http Agent!')
+        
     def post(self):        
         url = self.request.get('url')
         cookie = self.request.get('cookie')
