@@ -29,10 +29,11 @@ def async_handle_request(socketToBrowser):
     except Exception,  e:              
         print e
 
+port = 8081
 listener = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-listener.bind(('localhost', 8087))
+listener.bind(('localhost', port))
 listener.listen(9999)
-print 'client is listening...'
+print 'client is listening at port', port, '...'
 
 while True:
     try:

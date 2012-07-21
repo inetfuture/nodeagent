@@ -39,10 +39,11 @@ def async_handle_request(socketToClient):
     socketToClient.send(response)
     socketToClient.close()
 
+port = 8082
 listener = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-listener.bind(('localhost', 8088))
+listener.bind(('localhost', port))
 listener.listen(9999)
-print 'server is listening...'
+print 'server is listening at port', port, '...'
 
 while True:
     try:
