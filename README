@@ -1,5 +1,0 @@
-python verson: 2.7.3 http://www.python.org/ftp/python/2.7.3/python-2.7.3.msi
-socket目录下是纯socket实现，只能本机跑，AppEngine都不支持socket操作，只能做web
-GAE被墙，没法用
-SAE使用python需要申请内侧，先用php了
-目前只简单支持GET，问题多多，需要不断完善
